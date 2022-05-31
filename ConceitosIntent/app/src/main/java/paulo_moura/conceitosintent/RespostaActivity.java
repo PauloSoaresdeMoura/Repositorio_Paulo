@@ -38,7 +38,7 @@ public class RespostaActivity extends AppCompatActivity {
         edtResposta        = findViewById(R.id.edtResposta);
         imgbLimparResposta = findViewById(R.id.imgbLimparResposta);
 
-        Bundle extras = getIntent().getExtras();
+        Bundle extras      = getIntent().getExtras();
         String pergunta = "";
 
         if (extras != null){

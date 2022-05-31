@@ -55,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if (Build.VERSION.sdk_int < Build.VERSION_CODES.){
+
+        }else {
+
+        }
+
+
        imgbLimparPergunta.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
