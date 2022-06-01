@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,8 +21,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import paulo_moura.conceitosintent.utils.app.UtilsApp;
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE = 5;
+    private static final String TAG = "MainActivity" ;
     private Button btnPergunta;
     private TextView tvExibirResposta, tvRespostaDada;
     private EditText edtPerguntar;
@@ -73,8 +78,26 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-
         });
+
+        UtilsApp utilsApp = new UtilsApp();
+        Log.d(TAG, "Valor convertido do tipos primitivos float p/ int"
+                + utilsApp.convertToInt(5.1987));
+
+        byte b = -27;
+        Log.d(TAG, "Valor convertido do tipos primitivos byte p/ int"
+                + utilsApp.convertToInt(b));
+
+        short valorShort = 1000;
+        Log.d(TAG, "Valor convertido do tipos primitivos short p/ int"
+                + utilsApp.convertToInt(valorShort));
+
+        long valorLong = 92223452252229999L;
+        Log.d(TAG, "Valor convertido do tipos primitivos long p/ int"
+                + utilsApp.convertToInt(valorLong));
+
+        Log.d(TAG, "Valor convertido do tipos abstrato String p/ int"
+                + utilsApp.convertToInt(32));
 
         activityResultLauncher =registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
