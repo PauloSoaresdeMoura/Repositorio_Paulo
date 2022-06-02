@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Conceitos Intent</string>
+    <string name="pergunte_str">A pergunta é:</string>
+    <string name="resposta_str">A resposta é:</string>
+</resources>
