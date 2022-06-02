@@ -7,21 +7,21 @@ public class UtilsApp {
     //Escopo de classe
     private int soma = 0;
 
-    //
-    public int convertToInt(double valorDouble){
+    public UtilsApp(){ }
+
+    //converte p/ tipos primitivos do java
+    public static int convertToInt(double valorDouble){
         return (int) valorDouble;
 
     }
 
-    public int convertToInt(Context context, String objstring){
+    public static int convertToInt(Context context, String objstring){
         try {
             return Integer.parseInt(objstring);
         }catch (NumberFormatException e){
             Toast.makeText(context, "Por favor, informe um valor numérico válido", Toast.LENGTH_SHORT).show();
             return 0;
         }
-
-
 
     }
 
@@ -30,21 +30,17 @@ public class UtilsApp {
 
     } */
 
-    public int convertToInt(byte valorByte){
+    public static int convertToInt(byte valorByte){
         return (int) valorByte;
-
     }
 
-    public int convertToInt(short valorShort){
+    public static int convertToInt(short valorShort){
         return (int) valorShort;
-
     }
 
-    public int convertToInt(long valorLong){
+    public static int convertToInt(long valorLong){
         return (int) valorLong;
-
     }
-
 
 
 }

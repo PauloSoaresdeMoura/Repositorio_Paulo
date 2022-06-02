@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Valor convertido do tipos primitivos long p/ int"
                 + utilsApp.convertToInt(valorLong));
 
+
         Log.d(TAG, "Valor convertido do tipos abstrato String p/ int"
                 + utilsApp.convertToInt(32));
 
