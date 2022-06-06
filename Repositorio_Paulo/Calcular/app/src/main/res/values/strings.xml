@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Calcular</string>
+    
+    //Opções do Spinner da MainActivity
+    <string-array name="operacoes_matematica">
+        <item></item>
+        <item>Dividir</item>
+        <item>Multiplicar</item>
+        <item>Somar</item>
+        <item>Subtrair</item>
+    </string-array>
 </resources>
