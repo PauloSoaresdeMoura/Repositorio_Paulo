@@ -2,7 +2,9 @@ package formacao.desenvolvedores.tecnologia.uno.calcular;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -15,8 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+
     public static final String DIVIDIR     = "Dividir";
-    public static final String MULTIPLICAR = "Multiplicar;";
+    public static final String MULTIPLICAR = "Multiplicar";
     public static final String SOMAR       = "Somar";
     public static final String SUBTRAIR    = "Subtrair";
     private static EditText edtOperador1, edtOperador2;
@@ -47,33 +50,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spiOpcoes.setAdapter(adapterOpcoesMatematicas);
         spiOpcoes.setOnItemSelectedListener(this);
 
+        String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
+
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Pega a opção selecionada no Spinner
-                String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
-
-                if (opcaoSelecionada == DIVIDIR) {
-
-                } else if (opcaoSelecionada.equals(MULTIPLICAR)) {
-
-                }
-
-                if (opcaoSelecionada == DIVIDIR) {
-
-                }
-
-                if (opcaoSelecionada == MULTIPLICAR) {
-
-                }
-
-                if (opcaoSelecionada == SOMAR) {
-
-                }
-
-                if (opcaoSelecionada == SUBTRAIR) {
-
-                }
+                
             }
         });
     }
@@ -81,13 +63,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l){
 
-        Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(),
-                Toast.LENGTH_SHORT).show();
-    }
-    
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(),
+                //Toast.LENGTH_SHORT).show();
+
+        imgOperacao.setVisibility(View.VISIBLE);
+
+        //imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme());
+
+        if (adapterView.getItemAtPosition(i).toString().equals(DIVIDIR)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(MULTIPLICAR)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.multiplica, getTheme()));
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(SOMAR)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(SUBTRAIR)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
+
+        } else {
+            //Log.d(TAG, "Nenhuma operação matemática foi selecionada!");
+
+        }
     }
 
     @Override
