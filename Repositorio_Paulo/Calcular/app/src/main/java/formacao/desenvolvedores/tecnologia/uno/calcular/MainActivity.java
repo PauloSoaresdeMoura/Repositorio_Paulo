@@ -50,12 +50,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spiOpcoes.setAdapter(adapterOpcoesMatematicas);
         spiOpcoes.setOnItemSelectedListener(this);
 
-        String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
-
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                //Pega a opção selecionada no Spinner
+                String opcaoSelecionada = spiOpcoes.getSelectedItem().toString();
+
+                if (opcaoSelecionada == DIVIDIR){
+
+                } else
+                    if (opcaoSelecionada == MULTIPLICAR){
+
+                } else
+                    if (opcaoSelecionada == SOMAR){
+
+                } else
+                    if (opcaoSelecionada == SUBTRAIR){
+
+
+                }
             }
         });
     }
@@ -83,7 +96,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
 
         } else {
-            //Log.d(TAG, "Nenhuma operação matemática foi selecionada!");
+            Toast.makeText(MainActivity.this, "Nenhuma operação matemática foi selecionada!", Toast.LENGTH_SHORT).show();
+
+            imgOperacao.setVisibility(View.INVISIBLE);
 
         }
     }
@@ -91,5 +106,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    private String somar(){
+        String resultado = "";
+
+        int edtOperador1 = Integer.valueOf(edtOperador1.getText().toString());
+
+        return resultado;
     }
 }
