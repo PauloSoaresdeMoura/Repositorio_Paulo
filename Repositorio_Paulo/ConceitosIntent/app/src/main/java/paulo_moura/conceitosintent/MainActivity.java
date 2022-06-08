@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
        imgbLimparPergunta.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+
                edtPerguntar.setText("");
            }
        });
