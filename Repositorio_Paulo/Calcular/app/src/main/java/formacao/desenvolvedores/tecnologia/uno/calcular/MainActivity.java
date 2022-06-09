@@ -2,11 +2,8 @@ package formacao.desenvolvedores.tecnologia.uno.calcular;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,17 +15,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-
-    public static final String DIVIDIR     = "Dividir";
-    public static final String MULTIPLICAR = "Multiplicar";
-    public static final String SOMAR       = "Somar";
-    public static final String SUBTRAIR    = "Subtrair";
+    //Declaração dos atributos
+    public static final String DIVIDIR      = "Dividir";
+    public static final String MULTIPLICAR  = "Multiplicar";
+    public static final String SOMAR        = "Somar";
+    public static final String SUBTRAIR     = "Subtrair";
+    public static final String RAIZQUADRADA = "RaizQuadrada";
+    public static final String POTENCIA     = "Potencia";
     private static EditText edtOperador1, edtOperador2;
     private static TextView tvResultado;
     private static Spinner spiOpcoes;
     private static Button btnCalcular;
     private static ImageView imgOperacao;
     private static ImageButton imgbLimpar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,30 +82,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 } else if (opcaoSelecionada.equals(SUBTRAIR)){
                     tvResultado.setText(subtrair());
+
+                } else if (opcaoSelecionada.equals(RAIZQUADRADA)){
+
                 }
+
             }
         });
 
+        //Método p/ limpar as views
         imgbLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 spiOpcoes.setAdapter(adapterOpcoesMatematicas);
                 edtOperador1.setText("");
+                edtOperador1.setHint("");
                 edtOperador2.setText("");
+                edtOperador2.setHint("");
                 tvResultado.setText("");
             }
         });
     }
 
+    //Método p/ selecionar as operações matemáticas
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l){
 
-        //Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(),
-                //Toast.LENGTH_SHORT).show();
-
         imgOperacao.setVisibility(View.VISIBLE);
-
-        //imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme());
 
         if (adapterView.getItemAtPosition(i).toString().equals(DIVIDIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
@@ -127,6 +130,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtOperador1.setHint("Minuendo");
             edtOperador2.setHint("Subtraendo");
 
+        } else if (adapterView.getItemAtPosition(i).toString().equals(RAIZQUADRADA)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz, getTheme()));
+
+
         } else {
             imgOperacao.setVisibility(View.INVISIBLE);
         }
@@ -141,44 +148,49 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Métodos de validação
     private String dividir(){
         String resultado = "";
-        int n1 = Integer.valueOf(edtOperador1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtOperador2.getText().toString()).intValue();
-        resultado = String.valueOf(n1 / n2);
+        int dividendo = Integer.valueOf(edtOperador1.getText().toString()).intValue();
+        int divisor = Integer.valueOf(edtOperador2.getText().toString()).intValue();
+        resultado = String.valueOf(dividendo / divisor);
 
        return "O resultado da divisão é: " + resultado;
     }
 
     private String multiplicar(){
         String resultado = "";
-        int n1 = Integer.valueOf(edtOperador1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtOperador2.getText().toString()).intValue();
-        resultado = String.valueOf(n1 * n2);
+        int multiplicando = Integer.valueOf(edtOperador1.getText().toString()).intValue();
+        int multiplicador = Integer.valueOf(edtOperador2.getText().toString()).intValue();
+        resultado = String.valueOf(multiplicando * multiplicador);
 
         return "O resultado da multiplicação é: " + resultado;
     }
 
     private String somar(){
         String resultado = "";
-        int n1 = Integer.valueOf(edtOperador1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtOperador2.getText().toString()).intValue();
-        resultado = String.valueOf(n1 + n2);
+        int parcela1 = Integer.valueOf(edtOperador1.getText().toString()).intValue();
+        int parcela2 = Integer.valueOf(edtOperador2.getText().toString()).intValue();
+        resultado = String.valueOf(parcela1 + parcela2);
 
         return "O resultado da soma é: " +  resultado;
     }
 
     private String subtrair(){
         String resultado = "";
-        int n1 = Integer.valueOf(edtOperador1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtOperador2.getText().toString()).intValue();
-        resultado = String.valueOf(n1 - n2);
+        int minuendo = Integer.valueOf(edtOperador1.getText().toString()).intValue();
+        int subtraendo = Integer.valueOf(edtOperador2.getText().toString()).intValue();
+        resultado = String.valueOf(minuendo - subtraendo);
 
         return "O resultado da subtração é: " + resultado;
     }
 
-    private boolean validarTermoVazio(EditText editText){
+    private static String raiz(){
+        String resultado = "";
+        int x = Integer.valueOf(edtOperador1.getText().toString()).intValue();
 
-        return editText.getText().toString().isEmpty();
+        resultado = String.valueOf(Math.sqrt(x));
+
+        return "A raiz quadrada é: " + resultado;
     }
+
 
 
 }

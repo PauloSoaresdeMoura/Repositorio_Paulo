@@ -8,5 +8,7 @@
         <item>Multiplicar</item>
         <item>Somar</item>
         <item>Subtrair</item>
+        <item>Raiz Quadrada</item>
+        <item>Potência</item>
     </string-array>
 </resources>
