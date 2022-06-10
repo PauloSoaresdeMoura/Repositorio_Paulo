@@ -3,6 +3,7 @@ package formacao.desenvolvedores.tecnologia.uno.calcular;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.FocusFinder;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static final String SUBTRAIR     = "Subtrair";
     public static final String RAIZQUADRADA = "RaizQuadrada";
     public static final String POTENCIA     = "Potencia";
+    public static final String POT10        = "Pot10";
+    public static final String LOGARITMO    = "Logaritmo";
+
     private static EditText edtOperador1, edtOperador2;
     private static TextView tvResultado;
     private static Spinner spiOpcoes;
@@ -84,9 +88,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     tvResultado.setText(subtrair());
 
                 } else if (opcaoSelecionada.equals(RAIZQUADRADA)){
+                    tvResultado.setText(raiz());
 
+                } else if (opcaoSelecionada.equals(POTENCIA)){
+                    tvResultado.setText(potencia());
+
+                } else if (opcaoSelecionada.equals(POT10)){
+                    tvResultado.setText(pot10());
+
+                } else if (opcaoSelecionada.equals(LOGARITMO)){
+                    tvResultado.setText(logaritmo());
                 }
-
             }
         });
 
@@ -100,13 +112,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 edtOperador2.setText("");
                 edtOperador2.setHint("");
                 tvResultado.setText("");
+
             }
         });
+    }
+
+    private void setEdtOperador2Behavior(boolean block){
+
+        if (block){
+            //edtOperador2.setFocusable(false);
+            edtOperador2.setEnabled(false);
+        } else {
+            //edtOperador2.setFocusable(true);
+            edtOperador2.setEnabled(true);
+        }
     }
 
     //Método p/ selecionar as operações matemáticas
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l){
+        //Inicia com a view no comportamento padrão liberada
+        setEdtOperador2Behavior(false);
+
+
 
         imgOperacao.setVisibility(View.VISIBLE);
 
@@ -132,7 +160,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         } else if (adapterView.getItemAtPosition(i).toString().equals(RAIZQUADRADA)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz, getTheme()));
+            edtOperador1.setHint("Radicando");
+            edtOperador2.setHint("Não editável");
+            setEdtOperador2Behavior(false);
 
+        } else if (adapterView.getItemAtPosition(i).toString().equals(POTENCIA)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.potencia,getTheme()));
+            edtOperador1.setHint("Potência");
+            edtOperador2.setHint("Não editável");
+            setEdtOperador2Behavior(false);
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(POT10)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.pot10, getTheme()));
+            edtOperador1.setHint("Potência de 10");
+            edtOperador2.setHint("Não editável");
+            setEdtOperador2Behavior(false);
+
+        } else if (adapterView.getItemAtPosition(i).toString().equals(LOGARITMO)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.log, getTheme()));
+            edtOperador1.setHint("Logaritmo");
+            edtOperador2.setHint("Não editável");
+            setEdtOperador2Behavior(false);
 
         } else {
             imgOperacao.setVisibility(View.INVISIBLE);
@@ -184,13 +232,39 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private static String raiz(){
         String resultado = "";
-        int x = Integer.valueOf(edtOperador1.getText().toString()).intValue();
+        int raiz = Integer.valueOf(edtOperador1.getText().toString()).intValue();
 
-        resultado = String.valueOf(Math.sqrt(x));
+        resultado = String.valueOf(Math.sqrt(raiz));
 
         return "A raiz quadrada é: " + resultado;
     }
 
+    private static String potencia(){
+        String resultado = "";
+        double potencia = Double.parseDouble(edtOperador1.getText().toString());
+        double elevado = Double.parseDouble(edtOperador2.getText().toString());
+        resultado = String.valueOf(Math.pow(potencia, elevado));
 
+        return "A potência é: " + resultado;
+    }
+
+    private static String pot10(){
+        String resultado = "";
+        double pot10 = Double.parseDouble(edtOperador1.getText().toString());
+        double elevado = Double.parseDouble(edtOperador2.getText().toString());
+
+        resultado = String.valueOf(Math.pow(pot10, elevado) );
+
+        return "A potência de 10 é: " + resultado;
+    }
+
+    private static String logaritmo(){
+        String resultado ="";
+        double logaritmo = Double.parseDouble(edtOperador1.getText().toString());
+
+        resultado = String.valueOf(Math.log(logaritmo));
+
+        return "Resultado do log é: " + resultado;
+    }
 
 }
