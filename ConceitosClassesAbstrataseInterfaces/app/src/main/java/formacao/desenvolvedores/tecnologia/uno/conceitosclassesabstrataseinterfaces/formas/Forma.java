@@ -10,7 +10,7 @@ public abstract class Forma {
 		medida = new double[numMedidas]; // aloca array de medidas
 	}
 
-	// M�todos
+	// M�todos Concretos
 	public double getMedida(int i) { // obt�m uma medida
 		if (i < 0 || i >= medida.length) {
 			throw new RuntimeException("Numero invalido de medida.");

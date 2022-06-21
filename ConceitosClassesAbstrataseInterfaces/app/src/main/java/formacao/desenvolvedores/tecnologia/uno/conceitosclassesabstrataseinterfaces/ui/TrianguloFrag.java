@@ -20,7 +20,6 @@ import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfa
 public class TrianguloFrag extends Fragment {
     private EditText edtLado1, edtLado2, edtLado3;
     private TextView tvAreaTriangulo;
-    private ImageButton imgbLimparTriangulo, imgbCalcularTriangulo;
 
     public TrianguloFrag() {}
 
@@ -35,12 +34,12 @@ public class TrianguloFrag extends Fragment {
                              Bundle savedInstanceState) {
         View layoutFragment = inflater.inflate(R.layout.fragment_triangulo, container, false);
 
-        edtLado1              = layoutFragment.findViewById(R.id.edtLado1);
-        edtLado2              = layoutFragment.findViewById(R.id.edtLado2);
-        edtLado3              = layoutFragment.findViewById(R.id.edtLado3);
-        tvAreaTriangulo       = layoutFragment.findViewById(R.id.tvAreaTriangulo);
-        imgbLimparTriangulo   = layoutFragment.findViewById(R.id.imgbLimparTriangulo);
-        imgbCalcularTriangulo = layoutFragment.findViewById(R.id.imgbCalcularTriangulo);
+        edtLado1                          = layoutFragment.findViewById(R.id.edtLado1);
+        edtLado2                          = layoutFragment.findViewById(R.id.edtLado2);
+        edtLado3                          = layoutFragment.findViewById(R.id.edtLado3);
+        tvAreaTriangulo                   = layoutFragment.findViewById(R.id.tvAreaTriangulo);
+        ImageButton imgbLimparTriangulo   = layoutFragment.findViewById(R.id.imgbLimparTriangulo);
+        ImageButton imgbCalcularTriangulo = layoutFragment.findViewById(R.id.imgbCalcularTriangulo);
 
         imgbCalcularTriangulo.setOnClickListener(view -> {
             if(edtLado1.getText().toString().isEmpty()){
@@ -54,9 +53,9 @@ public class TrianguloFrag extends Fragment {
                 Toast.makeText(getContext(), "Informe o lado 03 do triângulo!", Toast.LENGTH_SHORT).show();
 
             } else{
-                Triangulo triangulo = new Triangulo(Double.valueOf(edtLado1.getText().toString())
-                        , Double.valueOf(edtLado2.getText().toString())
-                        , Double.valueOf(edtLado3.getText().toString()));
+                Triangulo triangulo = new Triangulo(Double.parseDouble(edtLado1.getText().toString())
+                        , Double.parseDouble(edtLado2.getText().toString())
+                        , Double.parseDouble(edtLado3.getText().toString()));
 
                 String areaFormatada = new DecimalFormat("#,##0.00").format(triangulo.area());
                 tvAreaTriangulo.setText(areaFormatada);

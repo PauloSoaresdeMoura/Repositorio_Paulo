@@ -20,7 +20,6 @@ import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfa
 public class RetanguloFrag extends Fragment {
     private EditText edtBase, edtAltura;
     private TextView tvAreaRetangulo;
-    private ImageButton imgbLimpar, imgbCalcular;
 
     public RetanguloFrag() {}
 
@@ -38,8 +37,8 @@ public class RetanguloFrag extends Fragment {
 
         edtBase         = layoutFragment.findViewById(R.id.edtBase);
         edtAltura       = layoutFragment.findViewById(R.id.edtLado2);
-        imgbCalcular    = layoutFragment.findViewById(R.id.imgbCalcularRetangulo);
-        imgbLimpar      = layoutFragment.findViewById(R.id.imgbLimparRetangulo);
+        ImageButton imgbCalcular = layoutFragment.findViewById(R.id.imgbCalcularRetangulo);
+        ImageButton imgbLimpar = layoutFragment.findViewById(R.id.imgbLimparRetangulo);
         tvAreaRetangulo = layoutFragment.findViewById(R.id.tvAreaRetangulo);
 
         imgbCalcular.setOnClickListener(view -> {
@@ -50,8 +49,8 @@ public class RetanguloFrag extends Fragment {
                 Toast.makeText(getContext(), "Informe a altura do retângulo!", Toast.LENGTH_SHORT).show();
 
             } else{
-                Retangulo retangulo = new Retangulo(Double.valueOf(edtBase.getText().toString())
-                        , Double.valueOf(edtAltura.getText().toString()));
+                Retangulo retangulo = new Retangulo(Double.parseDouble(edtBase.getText().toString())
+                        , Double.parseDouble(edtAltura.getText().toString()));
 
                 String areaFormatada = new DecimalFormat("#,##0.00").format(retangulo.area());
                 tvAreaRetangulo.setText(areaFormatada);

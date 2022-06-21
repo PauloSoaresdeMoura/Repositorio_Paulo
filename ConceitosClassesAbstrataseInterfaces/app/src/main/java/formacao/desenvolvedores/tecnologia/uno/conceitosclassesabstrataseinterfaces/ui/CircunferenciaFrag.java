@@ -18,7 +18,6 @@ import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfa
 import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.formas.Circunferencia;
 
 public class CircunferenciaFrag extends Fragment {
-    private ImageButton imgbLimpar, imgbCalcular;
     private TextView tvRaioCircunferencia;
     private EditText edtRaio;
 
@@ -35,8 +34,8 @@ public class CircunferenciaFrag extends Fragment {
                              Bundle savedInstanceState) {
         View layoutFragment = inflater.inflate(R.layout.fragment_circunferencia, container, false);
 
-        imgbCalcular         = layoutFragment.findViewById(R.id.imgbCalcular);
-        imgbLimpar           = layoutFragment.findViewById(R.id.imgbLimpar);
+        ImageButton imgbCalcular = layoutFragment.findViewById(R.id.imgbCalcular);
+        ImageButton imgbLimpar = layoutFragment.findViewById(R.id.imgbLimpar);
         tvRaioCircunferencia = layoutFragment.findViewById(R.id.tvRaioCircunferencia);
         edtRaio              = layoutFragment.findViewById(R.id.edtRaio);
 
@@ -44,7 +43,7 @@ public class CircunferenciaFrag extends Fragment {
             if(edtRaio.getText().toString().isEmpty()){
                 Toast.makeText(getContext(), "Informe a circunferência!", Toast.LENGTH_SHORT).show();
             } else{
-                Circunferencia circunferencia = new Circunferencia(Double.valueOf(edtRaio.getText().toString()));
+                Circunferencia circunferencia = new Circunferencia(Double.parseDouble(edtRaio.getText().toString()));
 
                 String areaFormatada = new DecimalFormat("#,##0.00").format(circunferencia.area());
                 tvRaioCircunferencia.setText(areaFormatada);

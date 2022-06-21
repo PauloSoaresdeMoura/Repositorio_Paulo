@@ -1,7 +1,5 @@
 package formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.formas;
 
-import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.formas.Forma;
-
 public class Triangulo extends Forma {
 	public Triangulo(double l1, double l2, double l3) {
 		super(3); // uso obrigat�rio do construtor da superclasse
