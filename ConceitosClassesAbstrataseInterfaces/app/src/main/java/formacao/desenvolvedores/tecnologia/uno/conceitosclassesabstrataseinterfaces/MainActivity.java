@@ -1,15 +1,14 @@
 package formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces;
 
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.R;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
 import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.ui.CircunferenciaFrag;
 import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.ui.MensagemFrag;
 import formacao.desenvolvedores.tecnologia.uno.conceitosclassesabstrataseinterfaces.ui.RetanguloFrag;
