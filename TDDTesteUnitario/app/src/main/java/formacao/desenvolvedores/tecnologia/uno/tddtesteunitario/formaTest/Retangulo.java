@@ -1,10 +1,9 @@
 package formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest;
 
-public class Circunferencia extends Forma{
+public class Retangulo extends Forma {
+    private   static  final  int  TAMANHO_ARRAY_INFO_CALCULO_AREA = 2;
 
-    private   static  final  int  TAMANHO_ARRAY_INFO_CALCULO_AREA = 1;
-
-    public Circunferencia(){
+    public Retangulo(){
         super(TAMANHO_ARRAY_INFO_CALCULO_AREA);
 
     }
@@ -18,5 +17,4 @@ public class Circunferencia extends Forma{
     public int getTamanhoArrayInfoCalculoArea(){
         return TAMANHO_ARRAY_INFO_CALCULO_AREA;
     }
-
 }

@@ -6,14 +6,14 @@ import static org.junit.Assert.*;
 import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Circunferencia;
 
 public class CircunferenciaTest {
-    public static Circunferencia circunferencia = new Circunferencia(1);
+    private static final double PRECISAO_4_CASAS_DECIMAIS = 3;
+    private Circunferencia circunferencia = new Circunferencia();
 
     @Test
     public void deveriaTerUmaMedidaDeRaioMaiorDoQueZeroNoArrayDeMedidas(){
 
         //Posição ZERO porque se trata de circunferencia que precisa de apenas uma informação p/ calcular a área
-        Circunferencia circunferencia = new Circunferencia(3);
-        Circunferencia.setMedidas(0, 3);
+        circunferencia.setMedida(0, 3);
 
         double raio = circunferencia.getMedida(0);
 
@@ -24,7 +24,29 @@ public class CircunferenciaTest {
 
     @Test
     public void deveriaTerUmLimiteDeTamanhoOVetorDeInformacoesDoCalculoDaArea(){
-        boolean tamanhoValido = circunferencia.setMedida(0, 3) > circunferencia;
+        final int TAMANHO = 1;
+
+        assertEquals(TAMANHO, circunferencia.getTamanhoArrayInfoCalculoArea());
+    }
+
+    @Test
+    public void deveriaCalcularAreaDaCircunferencia(){
+        final int POSICAO_ZERO = 0;
+        final int EXPOENTE_2 = 2;
+
+        /*Cálculos feitos no papel*/
+        double area_raio3 = 28.2743;
+        double area_raio4 = 50.2655;
+        double area_raio5 = 78.5398;
+
+        //Raio armazenado na estrutura de dados da classe Pai (Forma)
+        circunferencia.setMedida((int) POSICAO_ZERO, 5);
+
+        double area = Math.PI * Math.pow(circunferencia.getMedida(POSICAO_ZERO), EXPOENTE_2);
+
+        assertEquals("A área de uma circunferencia de raio 3 é 28,2743"
+                , area_raio5, area, PRECISAO_4_CASAS_DECIMAIS);
+
     }
 
 }

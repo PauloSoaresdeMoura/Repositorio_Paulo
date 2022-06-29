@@ -5,14 +5,14 @@ public abstract class Forma {
     private int TAMANHO_MAXIMO = 3;
 
     public Forma(int numMedidas) {
-        numeroDeMedida = new double[][numMedidas];
+        numeroDeMedida = new double[numMedidas];
     }
 
-    public double getMedida(int i){
+    public double getMedida(int posicao){
 
-        if (i > 0 && i <= TAMANHO_MAXIMO){
+        if (posicao >= 0 && posicao < TAMANHO_MAXIMO){
 
-            return numeroDeMedida[i];
+            return numeroDeMedida[posicao];
 
         }else {
             throw new RuntimeException("Número inválido p/ calculo de área.");
@@ -21,6 +21,7 @@ public abstract class Forma {
     }
 
     public void setMedida(int posicao, double medida){
+
         numeroDeMedida[posicao] = medida;
     }
 
