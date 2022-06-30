@@ -26,10 +26,29 @@ public class RetanguloTest {
 
     @Test
     public void deveriaCalcularAreaDoRetangulo(){
-        double lado1 = 2;
-        double lado2 = 3;
-        double tamanhoDaArea = Math.(lado1 * lado2);
+        double base = 2;
+        double altura = 3;
 
+        double area = base * altura;
 
+        double tamanhoDaArea = (base * altura);
+
+        assertTrue(area);
+
+    }
+
+    private void assertTrue(double area) {
+    }
+
+    @Test
+    public void deveriaCalcularOPerimetroDoRetangulo(){
+        double base = 2;
+        double altura = 3;
+
+        double perimetro = 2 * (base + altura);
+
+        double tamanhoDoPerimetro = (2*(base + altura));
+
+        assertTrue(perimetro);
     }
 }
