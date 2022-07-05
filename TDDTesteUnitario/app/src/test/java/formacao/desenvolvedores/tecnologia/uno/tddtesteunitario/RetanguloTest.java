@@ -1,54 +1,44 @@
 package formacao.desenvolvedores.tecnologia.uno.tddtesteunitario;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Retangulo;
 
 import org.junit.Test;
 
-import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Circunferencia;
-
 public class RetanguloTest {
-    private RetanguloTest retanguloTest = new RetanguloTest();
+    private static final double DIFERENCA_ACEITAVEL = 0;
+    private Retangulo retangulo                     = new Retangulo();
 
     @Test
-    public void deveriaTerUmaMedidaDeRaioMaiorDoQueZeroNoArrayDeMedidas(){
+    public void calcularAreaDoRetangulo(){
+        double area_BaseXAltura    = 10;
+        double DIFERENCA_ACEITAVEL = 0.0001;
 
-        retanguloTest.deveriaTerUmLimiteDeTamanhoOVetorDeInformacoesDoCalculoDaArea();
+        retangulo.setMedida(0, 5);
+        retangulo.setMedida(1, 2);
+
+        double area = retangulo.getMedida(0) * retangulo.getMedida(1);
+
+        assertEquals("A area de uma de um retangulo: " + area_BaseXAltura, area_BaseXAltura,
+                area, DIFERENCA_ACEITAVEL);
 
     }
 
     @Test
-    public void deveriaTerUmLimiteDeTamanhoOVetorDeInformacoesDoCalculoDaArea(){
-        final int TAMANHO = 1;
+    public void calcularPerimetroRetangulo(){
+        double perimetroCalculadoNoPapel              = 14.00;
+        final int ARMAZENAR_BASE_NA_PRIMEIRA_POSICAO  = 0;
+        final int ARMAZENAR_ALTURA_NA_SEGUNDA_POSICAO = 1;
 
-        assertEquals(TAMANHO, retanguloTest);
-    }
+        retangulo.setMedida(0, 5);
+        retangulo.setMedida(1, 2);
 
-    @Test
-    public void deveriaCalcularAreaDoRetangulo(){
-        double base = 2;
-        double altura = 3;
+        double perimetro = 2 * (retangulo.getMedida(ARMAZENAR_BASE_NA_PRIMEIRA_POSICAO)
+                + retangulo.getMedida(ARMAZENAR_ALTURA_NA_SEGUNDA_POSICAO));
 
-        double area = base * altura;
-
-        double tamanhoDaArea = (base * altura);
-
-        assertTrue(area);
-
-    }
-
-    private void assertTrue(double area) {
-    }
-
-    @Test
-    public void deveriaCalcularOPerimetroDoRetangulo(){
-        double base = 2;
-        double altura = 3;
-
-        double perimetro = 2 * (base + altura);
-
-        double tamanhoDoPerimetro = (2*(base + altura));
-
-        assertTrue(perimetro);
+        assertEquals("O perimetro de calculo no papel é :" + perimetroCalculadoNoPapel
+                , perimetroCalculadoNoPapel
+                , perimetro
+                , DIFERENCA_ACEITAVEL);
     }
 }

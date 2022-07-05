@@ -2,28 +2,34 @@ package formacao.desenvolvedores.tecnologia.uno.tddtesteunitario;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Forma;
+import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Triangulo;
 
 public class TrianguloTest {
     private boolean area;
 
+    private Triangulo triangulo;
     public TrianguloTest() {
-        super();
+
+    }
+
+    @Before
+    public void instanciarObjeto(){
+        triangulo = new Triangulo();
     }
 
     @Test
-    public double areaDoTriangulo() {
-        double lado1     = 3;
-        double lado2     = 3;
-        double lado3     = 3;
-        double somaLados = 9;
-
-        return somaLados / 2;
-
-        assertTrue(area);
+    public void deveriaSomarOsLadosDoTriangulo() {
+        double lado1     = l1;
+        double lado2     = l2;
+        double lado3     = l3;
+        double somaLados = 43;
     }
 
+    @Test
+    public void calcularAreaDoTriangulo(){
+        double somaLados  = 43 / 2;
+    }
 }
