@@ -9,12 +9,6 @@ public class Circunferencia extends Forma{
 
     }
 
-    @Override
-    public double area(){
-
-        return 0;
-    }
-
     public int getTamanhoArrayInfoCalculoArea(){
         return TAMANHO_ARRAY_INFO_CALCULO_AREA;
     }
