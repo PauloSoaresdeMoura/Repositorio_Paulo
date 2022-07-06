@@ -26,7 +26,6 @@ public class RetanguloFrag extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -35,11 +34,11 @@ public class RetanguloFrag extends Fragment {
 
         View layoutFragment = inflater.inflate(R.layout.fragment_retangulo, container, false);
 
-        edtBase         = layoutFragment.findViewById(R.id.edtBase);
-        edtAltura       = layoutFragment.findViewById(R.id.edtLado2);
+        edtBase                  = layoutFragment.findViewById(R.id.edtBase);
+        edtAltura                = layoutFragment.findViewById(R.id.edtLado2);
         ImageButton imgbCalcular = layoutFragment.findViewById(R.id.imgbCalcularRetangulo);
-        ImageButton imgbLimpar = layoutFragment.findViewById(R.id.imgbLimparRetangulo);
-        tvAreaRetangulo = layoutFragment.findViewById(R.id.tvAreaRetangulo);
+        ImageButton imgbLimpar   = layoutFragment.findViewById(R.id.imgbLimparRetangulo);
+        tvAreaRetangulo          = layoutFragment.findViewById(R.id.tvAreaRetangulo);
 
         imgbCalcular.setOnClickListener(view -> {
             if(edtBase.getText().toString().isEmpty()){
