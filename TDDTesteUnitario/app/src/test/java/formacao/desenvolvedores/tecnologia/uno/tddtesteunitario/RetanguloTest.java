@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class RetanguloTest {
     private static final double DIFERENCA_ACEITAVEL = 0;
-    private Retangulo retangulo                     = new Retangulo();
+    private final Retangulo retangulo               = new Retangulo();
 
     @Test
     public void calcularAreaDoRetangulo(){

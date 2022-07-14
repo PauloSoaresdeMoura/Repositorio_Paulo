@@ -7,7 +7,7 @@ import formacao.desenvolvedores.tecnologia.uno.tddtesteunitario.formaTest.Circun
 
 public class CircunferenciaTest {
     private static final double PRECISAO_4_CASAS_DECIMAIS = 3;
-    private Circunferencia circunferencia = new Circunferencia();
+    private final Circunferencia circunferencia = new Circunferencia();
 
     @Test
     public void deveriaTerUmaMedidaDeRaioMaiorDoQueZeroNoArrayDeMedidas(){
@@ -35,18 +35,14 @@ public class CircunferenciaTest {
         final int EXPOENTE_2 = 2;
 
         /*Cálculos feitos no papel*/
-        double area_raio3 = 28.2743;
-        double area_raio4 = 50.2655;
         double area_raio5 = 78.5398;
 
         //Raio armazenado na estrutura de dados da classe Pai (Forma)
-        circunferencia.setMedida((int) POSICAO_ZERO, 5);
+        circunferencia.setMedida(POSICAO_ZERO, 5);
 
         double area = Math.PI * Math.pow(circunferencia.getMedida(POSICAO_ZERO), EXPOENTE_2);
 
         assertEquals("A área de uma circunferencia de raio 3 é 28,2743"
                 , area_raio5, area, PRECISAO_4_CASAS_DECIMAIS);
-
     }
-
 }
