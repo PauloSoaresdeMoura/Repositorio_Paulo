@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         imgbLimparPergunta = findViewById(R.id.imgbLimparPergunta);
         tvRespostaDada     = findViewById(R.id.tvRespostaDada);
 
-
         tvRespostaDada.setVisibility(View.INVISIBLE);
 
         ActionBar actionBar = getSupportActionBar();
