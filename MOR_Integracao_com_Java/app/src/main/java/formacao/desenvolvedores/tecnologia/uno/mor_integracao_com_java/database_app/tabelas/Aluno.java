@@ -2,12 +2,15 @@ package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database
 
 import androidx.room.Entity;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tbl_aluno"
     , indices = {@Index(value = "id", unique = true)})
 
 public class Aluno {
+    @PrimaryKey (autoGenerate = true)
     private int id;
+
     private String nome, celular, email, github_usuario;
 
     public Aluno(){}

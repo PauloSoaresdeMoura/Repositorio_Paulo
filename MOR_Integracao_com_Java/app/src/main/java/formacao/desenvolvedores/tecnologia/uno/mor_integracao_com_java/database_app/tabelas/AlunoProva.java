@@ -5,6 +5,7 @@ import static androidx.room.ForeignKey.CASCADE;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tbl_alunoProva"
         , primaryKeys = {"id_aluno", "id_prova"}
@@ -15,6 +16,7 @@ import androidx.room.Index;
         childColumns = "id_prova", onUpdate = CASCADE, onDelete = CASCADE)})
 
 public class AlunoProva {
+    @PrimaryKey (autoGenerate = true)
     private int id_aluno, id_prova;
 
     public AlunoProva() {}
@@ -23,7 +25,6 @@ public class AlunoProva {
     public AlunoProva(AlunoProva tblAlunoProva) {
         this.id_aluno = tblAlunoProva.getId_aluno();
         this.id_prova = tblAlunoProva.getId_prova();
-
     }
 
     public int getId_aluno() {

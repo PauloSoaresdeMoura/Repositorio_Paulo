@@ -13,6 +13,11 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.converter.Converters;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.interfaces_dao.ICRUDAlunoDAO;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.interfaces_dao.ICRUDAlunoProvaDAO;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.interfaces_dao.ICRUDPerguntaDAO;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.interfaces_dao.ICRUDProvaDAO;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.interfaces_dao.ICRUDRespostaDAO;
 
 @TypeConverters({Converters.class})
 public abstract class DatabaseApp extends RoomDatabase {
@@ -20,7 +25,12 @@ public abstract class DatabaseApp extends RoomDatabase {
     private static volatile DatabaseApp sInstance;
     public static final String TAG = "DatabaseApp";
 
-
+    //Definição dos atributos de classe das interfaces DAO
+    public abstract ICRUDAlunoDAO alunoDAO();
+    public abstract ICRUDAlunoProvaDAO alunoProvaDAO();
+    public abstract ICRUDPerguntaDAO perguntaDAO();
+    public abstract ICRUDProvaDAO provaDAO();
+    public abstract ICRUDRespostaDAO respostaDAO();
 
     public DatabaseApp() {//construtor público vazio
     }

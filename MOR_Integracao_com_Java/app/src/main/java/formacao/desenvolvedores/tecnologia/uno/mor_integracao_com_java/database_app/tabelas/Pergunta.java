@@ -2,23 +2,23 @@ package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database
 
 import androidx.room.Entity;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tbl_pergunta"
         , indices = {@Index(value = "id", unique = true)})
 
 public class Pergunta {
+    @PrimaryKey (autoGenerate = true)
     private String pergunta;
     private int id, prova_id;
 
-    public Pergunta() {
-
-    }
+    public Pergunta() {}
 
     //Construtor de cópia
     public Pergunta(Pergunta tblAluno) {
-        this.id             = tblAluno.getId();
-        this.prova_id       = tblAluno.getProva_id();
-
+        this.id       = tblAluno.getId();
+        this.prova_id = tblAluno.getProva_id();
+        this.pergunta = tblAluno.getPergunta();
     }
 
     public String getPergunta() {
