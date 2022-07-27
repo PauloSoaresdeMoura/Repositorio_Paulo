@@ -1,57 +1,65 @@
 package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.async_crud;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.DatabaseApp;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoDbCallback;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoProvaDbCallback;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Aluno;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.AlunoProva;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.utils_app.UtilsApp;
 
-public class AsyncAlunoCRUD {
+public class AsyncAlunoCRUD extends AsyncTask<Aluno, Integer, List<Aluno>> {
     private static String TAG = "AsyncAlunoProvaCRUD";
     private UtilsApp.DataBaseCrudOperations dbOperations;
     private Context contextActivityOrFragment;
-    private List<AlunoProva> lista = null;
+    private List<Aluno> lista = null;
 
     //Evitar leak de memória
-    private WeakReference<IAlunoProvaDbCallback> dbCallBack;
+    private WeakReference<IAlunoDbCallback> dbCallBack;
 
-    public AsyncAlunoProvaCRUD(UtilsApp.DataBaseCrudOperations dbOperations
+    public AsyncAlunoCRUD(UtilsApp.DataBaseCrudOperations dbOperations
             , Context context
-            , IAlunoProvaDbCallback callBack){
+            , IAlunoDbCallback callBack){
         this.dbOperations              = dbOperations;
         this.contextActivityOrFragment = context;
         dbCallBack                     = new WeakReference(callBack);
     }
 
+    public AsyncAlunoCRUD(Context context){
+        this.dbOperations              = UtilsApp.DataBaseCrudOperations.CREATE;
+        this.contextActivityOrFragment = context;
+        dbCallBack                     = null;
+    }
 
     @Override
-    protected List<AlunoProva> doInBackground(AlunoProva... alunosProvas) {
+    protected List<Aluno> doInBackground(Aluno... alunos) {
         try{
             DatabaseApp databaseApp = DatabaseApp.getInstance(contextActivityOrFragment);
             lista                   = null;
 
             switch (dbOperations){
                 case CREATE:{
-                    for(AlunoProva alunoProva : alunosProvas) {
-                        databaseApp.alunoProvaDAO().insertAlunoProva(alunoProva);
+                    for(Aluno aluno : alunos) {
+                        databaseApp.alunosDAO().insertAluno(aluno);
                     }
                     break;
                 }
                 case READ:{
-                    lista = databaseApp.alunoProvaDAO().getAllAlunosProvas();
+                    lista = databaseApp.alunosDAO().getAllAluno();
                     break;
                 }
                 case UPDATE:{
-                    databaseApp.alunoProvaDAO().updateAlunoProva(alunosProvas[0]);
+                    databaseApp.alunosDAO().updateAluno(alunos[0]);
                     break;
                 }
                 case DELETE:{
-                    databaseApp.alunoProvaDAO().deleteAlunoProva(alunosProvas[0]);
+                    databaseApp.alunosDAO().deleteAluno(alunos[0]);
                     break;
                 }
             }
@@ -64,18 +72,15 @@ public class AsyncAlunoCRUD {
     }
 
     @Override
-    protected void onPostExecute(List<AlunoProva> alunosProvas) {
-        super.onPostExecute(alunosProvas);
+    protected void onPostExecute(List<Aluno> alunos) {
+        super.onPostExecute(alunos);
 
         if(dbOperations == UtilsApp.DataBaseCrudOperations.CREATE
                 || dbOperations == UtilsApp.DataBaseCrudOperations.READ) {
-            IAlunoProvaDbCallback callBack = dbCallBack.get();
-            if (callBack != null) {
-                callBack.getAlunoProvaFromDB(alunosProvas);
+            if (dbCallBack != null) {
+                IAlunoDbCallback callBack = dbCallBack.get();
+                callBack.getAlunoFromDB(alunos);
             }
         }
     }
-
-
-
 }

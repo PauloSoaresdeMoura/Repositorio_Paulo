@@ -34,7 +34,7 @@ public interface ICRUDRespostaDAO {
     public void deleteResposta(Resposta respostaTable);//Deleta resposta
 
     @Transaction
-    @Query("DELETE FROM tbl_resposta WHERE id = id")
+    @Query("DELETE FROM tbl_resposta WHERE id = :id")
     public void deleteRespostaByID(int id);//Deleta as respostas pelo id
 
     @Query("DELETE FROM tbl_resposta WHERE id > 0")

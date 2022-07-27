@@ -34,7 +34,7 @@ public interface ICRUDPerguntaDAO {
     public void deletePergunta(Pergunta perguntaTable);//Deleta pergunta
 
     @Transaction
-    @Query("DELETE FROM tbl_pergunta WHERE id = id")
+    @Query("DELETE FROM tbl_pergunta WHERE id = :id")
     public void deletePerguntaByID(int id);//Deleta pergunta pelo id
 
     @Query("DELETE FROM tbl_pergunta WHERE id > 0")

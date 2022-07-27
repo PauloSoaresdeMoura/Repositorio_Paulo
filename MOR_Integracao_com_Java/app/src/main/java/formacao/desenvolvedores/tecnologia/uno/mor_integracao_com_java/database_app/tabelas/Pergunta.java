@@ -9,9 +9,9 @@ import androidx.room.PrimaryKey;
 
 public class Pergunta {
     @PrimaryKey (autoGenerate = true)
+    private int id;
+    private int prova_id;
     private String pergunta;
-    private int id, prova_id;
-
     public Pergunta() {}
 
     //Construtor de cópia

@@ -1,17 +1,20 @@
 package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.async_crud;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.DatabaseApp;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoDbCallback;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IPerguntaDbCallback;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Aluno;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Pergunta;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.utils_app.UtilsApp;
 
-public class AsyncPerguntaCRUD {
+public class AsyncPerguntaCRUD extends AsyncTask<Pergunta, Integer, List<Pergunta>> {
     private static String TAG = "AsyncPerguntaCRUD";
     private UtilsApp.DataBaseCrudOperations dbOperations;
     private Context contextActivityOrFragment;
@@ -43,11 +46,11 @@ public class AsyncPerguntaCRUD {
                     break;
                 }
                 case READ:{
-                    lista = databaseApp.perguntasDAO().getAllPerguntas();
+                    lista = databaseApp.perguntasDAO().getAllPergunta();
                     break;
                 }
                 case UPDATE:{
-                    databaseApp.perguntasDAO().updatePerguntas(perguntas[0]);
+                    databaseApp.perguntasDAO().updatePergunta(perguntas[0]);
                     break;
                 }
                 case DELETE:{
@@ -69,8 +72,8 @@ public class AsyncPerguntaCRUD {
 
         if(dbOperations == UtilsApp.DataBaseCrudOperations.CREATE
                 || dbOperations == UtilsApp.DataBaseCrudOperations.READ) {
-            IPerguntaDbCallback callBack = dbCallBack.get();
-            if (callBack != null) {
+            if (dbCallBack != null) {
+                IPerguntaDbCallback callBack = dbCallBack.get();
                 callBack.getPerguntaFromDB(perguntas);
             }
         }

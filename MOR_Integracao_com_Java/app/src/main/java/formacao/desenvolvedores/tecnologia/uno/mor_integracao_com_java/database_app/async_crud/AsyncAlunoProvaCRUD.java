@@ -1,17 +1,20 @@
 package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.async_crud;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.DatabaseApp;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoDbCallback;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoProvaDbCallback;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Aluno;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.AlunoProva;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.utils_app.UtilsApp;
 
-public class AsyncAlunoProvaCRUD {
+public class AsyncAlunoProvaCRUD extends AsyncTask<AlunoProva, Integer, List<AlunoProva>> {
     private static String TAG = "AsyncAlunoProvaCRUD";
     private UtilsApp.DataBaseCrudOperations dbOperations;
     private Context contextActivityOrFragment;
@@ -43,7 +46,7 @@ public class AsyncAlunoProvaCRUD {
                     break;
                 }
                 case READ:{
-                    lista = databaseApp.alunoProvaDAO().getAllAlunosProvas();
+                    lista = databaseApp.alunoProvaDAO().getAllAlunoProva();
                     break;
                 }
                 case UPDATE:{
@@ -69,8 +72,8 @@ public class AsyncAlunoProvaCRUD {
 
         if(dbOperations == UtilsApp.DataBaseCrudOperations.CREATE
                 || dbOperations == UtilsApp.DataBaseCrudOperations.READ) {
-            IAlunoProvaDbCallback callBack = dbCallBack.get();
-            if (callBack != null) {
+            if (dbCallBack != null) {
+                IAlunoProvaDbCallback callBack = dbCallBack.get();
                 callBack.getAlunoProvaFromDB(alunosProvas);
             }
         }

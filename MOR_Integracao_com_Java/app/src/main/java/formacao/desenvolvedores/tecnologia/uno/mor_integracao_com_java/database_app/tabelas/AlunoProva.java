@@ -11,12 +11,11 @@ import androidx.room.PrimaryKey;
         , primaryKeys = {"id_aluno", "id_prova"}
         , indices = {@Index(value = {"id_aluno"}), @Index(value = {"id_prova"})}
         , foreignKeys = {@ForeignKey(entity = Aluno.class, parentColumns = "id",
-        childColumns = "idAluno", onUpdate = CASCADE, onDelete = CASCADE)
+        childColumns = "id_aluno", onUpdate = CASCADE, onDelete = CASCADE)
         , @ForeignKey(entity = Prova.class, parentColumns = "id",
         childColumns = "id_prova", onUpdate = CASCADE, onDelete = CASCADE)})
 
 public class AlunoProva {
-    @PrimaryKey (autoGenerate = true)
     private int id_aluno, id_prova;
 
     public AlunoProva() {}

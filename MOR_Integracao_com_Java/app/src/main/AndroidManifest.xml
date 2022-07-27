@@ -4,6 +4,7 @@
     package="formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java">
 
     <application
+        android:name=".database_app.MorInit"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".database_app.ui.CadastroAlunoActivity"/>
     </application>
 
 </manifest>

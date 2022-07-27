@@ -1,17 +1,20 @@
 package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.async_crud;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.DatabaseApp;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoDbCallback;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IProvaDbCallback;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Aluno;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Prova;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.utils_app.UtilsApp;
 
-public class AsyncProvaCRUD {
+public class AsyncProvaCRUD extends AsyncTask<Prova, Integer, List<Prova>> {
     private static String TAG = "AsyncProvaCRUD";
     private UtilsApp.DataBaseCrudOperations dbOperations;
     private Context contextActivityOrFragment;
@@ -42,7 +45,7 @@ public class AsyncProvaCRUD {
                     break;
                 }
                 case READ:{
-                    lista = databaseApp.provasDAO().getAllProvas();
+                    lista = databaseApp.provasDAO().getAllProva();
                     break;
                 }
                 case UPDATE:{
@@ -68,8 +71,8 @@ public class AsyncProvaCRUD {
 
         if(dbOperations == UtilsApp.DataBaseCrudOperations.CREATE
                 || dbOperations == UtilsApp.DataBaseCrudOperations.READ) {
-            IProvaDbCallback callBack = dbCallBack.get();
-            if (callBack != null) {
+            if (dbCallBack != null) {
+                IProvaDbCallback callBack = dbCallBack.get();
                 callBack.getProvaFromDB(provas);
             }
         }

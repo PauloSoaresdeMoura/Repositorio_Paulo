@@ -34,7 +34,7 @@ public interface ICRUDAlunoDAO {
     void deleteAluno(Aluno alunoTable);//Deleta aluno da tabela
 
     @Transaction
-    @Query("DELETE FROM tbl_aluno WHERE id = id")
+    @Query("DELETE FROM tbl_aluno WHERE id = :id")
     void deleteAlunoByID(int id);
 
     @Query("DELETE FROM tbl_aluno WHERE id > 0")

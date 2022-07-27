@@ -3,39 +3,74 @@ package formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.nambimobile.widgets.efab.ExpandableFab;
+import com.nambimobile.widgets.efab.FabOption;
+
+import java.util.List;
 
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.async_crud.AsyncAlunoCRUD;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.dbcallbacks.IAlunoDbCallback;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.tabelas.Aluno;
+import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.database_app.ui.CadastroAlunoActivity;
 import formacao.desenvolvedores.tecnologia.uno.mor_integracao_com_java.utils_app.UtilsApp;
 
 public class MainActivity extends AppCompatActivity {
-    private Context context;
-    private Aluno aluno;
+    private ExpandableFab expandableFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        aluno = new Aluno();
-        aluno.setNome("Paulo");
-        aluno.setCelular("49999999");
-        aluno.setEmail("email.com");
-        aluno.setGithub_usuario("psm");
+        expandableFab = findViewById(R.id.expandable_fab);
 
-        @Override
-                protected void onResume(){
-            super.onResume();
+        FabOption fabOptionAluno = findViewById(R.id.fabOptionAluno);
+        fabOptionAluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroAlunoActivity.class);
+                startActivity(intent);
+            }
+        });
 
-            context = getApplicationContext();
+        FabOption fabOptionProva = findViewById(R.id.fabOptionProva);
+        fabOptionProva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Não implementado", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-            AsyncAlunoCRUD asyncAlunoCRUD = new AsyncAlunoCRUD(UtilsApp.DataBaseCrudOperations.CREATE)
-                    , context
-                    , thhis;
+        FabOption fabOptionAlunoProva = findViewById(R.id.fabOptionAlunoProva);
+        fabOptionAlunoProva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Não implementado", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-            AsyncAlunoCRUD.execute(aluno);
-        }
+        FabOption fabOptionPergunta = findViewById(R.id.fabOptionPergunta);
+        fabOptionPergunta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Não implementado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        FabOption fabOptionResposta = findViewById(R.id.fabOptionResposta);
+        fabOptionResposta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Não implementado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
 
     }

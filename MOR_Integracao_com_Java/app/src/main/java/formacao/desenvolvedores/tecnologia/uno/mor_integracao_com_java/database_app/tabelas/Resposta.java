@@ -9,7 +9,8 @@ import androidx.room.PrimaryKey;
 
 public class Resposta {
     @PrimaryKey (autoGenerate = true)
-    private int id, pergunta_id;
+    private int id;
+    //private int pergunta_id;
 
     public Resposta() {}
 

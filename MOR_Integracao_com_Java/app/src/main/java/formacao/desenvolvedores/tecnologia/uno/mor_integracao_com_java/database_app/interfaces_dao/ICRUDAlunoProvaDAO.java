@@ -19,8 +19,8 @@ public interface ICRUDAlunoProvaDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertAlunoProva(AlunoProva alunoProvaTable);//Insere aluno prova na tabela AlunoProva
 
-    @Query("SELECT * FROM tbl_alunoProva WHERE id_aluno = :id")
-    public Aluno getEspecificaAlunoProvaByID(int id);
+    @Query("SELECT * FROM tbl_alunoProva WHERE id_aluno = :idAluno AND id_prova = :idProva")
+    public AlunoProva getEspecificaAlunoProvaByID(int idAluno, int idProva);
 
     @Query("SELECT * FROM tbl_alunoProva ORDER BY id_aluno DESC")//Seleciona todos os alunos
     public List<AlunoProva> getAllAlunoProva();
@@ -35,7 +35,7 @@ public interface ICRUDAlunoProvaDAO {
     public void deleteAlunoProva(AlunoProva alunoProvaTable);//Deleta aluno
 
     @Transaction
-    @Query("DELETE FROM tbl_alunoProva WHERE id_aluno = id_aluno")
+    @Query("DELETE FROM tbl_alunoProva WHERE id_aluno = :id")
     public void deleteAlunoProvaByID(int id);//Deleta os alunos pelo id
 
     @Query("DELETE FROM tbl_alunoProva WHERE id_aluno > 0")

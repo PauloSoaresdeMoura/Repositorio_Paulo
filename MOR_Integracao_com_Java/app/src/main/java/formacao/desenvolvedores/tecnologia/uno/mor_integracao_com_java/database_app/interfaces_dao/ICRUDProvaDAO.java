@@ -34,7 +34,7 @@ public interface ICRUDProvaDAO {
     public void deleteProva(Prova provaTable);//Deleta prova
 
     @Transaction
-    @Query("DELETE FROM tbl_prova WHERE id = id")
+    @Query("DELETE FROM tbl_prova WHERE id = :id")
     public void deleteProvaByID(int id);//Deleta prova pelo id
 
     @Query("DELETE FROM tbl_prova WHERE id > 0")
