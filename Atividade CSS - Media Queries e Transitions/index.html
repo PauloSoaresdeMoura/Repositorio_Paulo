@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Type e Media Queries</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+<body>
+    <br>
+    <legend align="center">Cadastre-se Aqui</legend>
+    <br><br>
+    <!--Carrega o tipo da fonte de acordo com a tela-->
+    <link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css">
+    <link rel="stylesheet" type="text/css" media="print" href="serif.css">
+
+    <!--Media Features responsavel por diferenciar os dispositivos -->
+    <link rel="stylesheet" href="estilo.css" media="screen and (max-width:480px)" />
+
+    <!--Operadores Lógicos-->
+    <!--And-->
+    <link rel="stylesheet" href="estilo.css" media="all and (not color)" />
+    <!--Only-->
+    <link rel="stylesheet" href="estilo.css" media="only screen and (color)" />
+    <!--Or = ","-->
+    <link rel="stylesheet" href="estilo.css" media="screen and (color), projection and (color)" />
+
+    <div class="container" align="center">
+        <table cellspacing="12">
+            <tr>
+                <td>
+                    <div>
+                        <label for="E-mail">E-MAIL</label>
+                    </div>
+                    <input type="text" placeholder="Informe seu E-mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label for="login">LOGIN</label>
+                    </div>
+                    <input type="text" placeholder="Informe seu Login">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label for="senha">SENHA</label>
+                    </div>
+                    <input type="text" placeholder="Informe sua Senha">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label for="confirme senha">CONFIRME A SENHA</label>
+                    </div>
+                    <input type="text" placeholder="Confirme sua Senha">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="submit" value="Cancelar" class="btn-can shrink">
+                    <input type="submit" value="Cadastrar" class="btn-cad grow">
+                </td>
+            </tr>
+        </table>
+    </div>
+    </fieldset>
+</body>
+
+</html>
