@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Aula 08/09/22</title>
+</head>
+
+<body>
+    <header class="intro">
+        <h1>CSS-Revisão</h1>
+        <h2>Utilizando HTML 5 com CSS</h2>
+        <h3>Com o uso do CSS 3 tornaremos o Projeto muito mais Estiloso e Elegante!</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#other">Article</a></li>
+            <li><a href="#another">Arquives</a></li>
+            <li><a href="https://www.apress.com" target="_blank">Apress</a></li>
+        </ul>
+    </nav>
+    <!--Area de conteúdo-->
+    <div id="contentArea">
+        <div id="mainContent">
+            <!--Seção Principal-->
+            <section class="rounded">
+                <header>
+                    <h2>Conteúdo Principal</h2>
+                </header>
+                <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </section>
+            <section>
+                <article class="featureContent">
+                    <a id="feature"></a>
+                    <header>
+                        <h2>Featured Article</h2>
+                    </header>
+                    <!--Rotação-->
+                    <div class="rotateContainer">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and Maker including versions of Lorem Ipsum.
+                        </p>
+                        <img src="img/tdbem.png" alt="" width="85px" height="85px" class="rotate">
+                        <br>
+                        <input type="range" min="-180" max="180" value="0" step="18" onchange="rotateImage(this.value)">
+                        <br>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                        </p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                        </p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                        </p>
+                    </div>
+                </article>
+                <!--Conteúdo Outro-->
+                <article class="outherContent">
+                    <a id="feature"></a>
+                    <header>
+                        <h3>Bordas Arredondadas</h3>
+                    </header>
+                    <div>
+                        <p>Detalhes sobre Bordas</p>
+                        <p>
+                            <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                Lorem Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                                has a more-or-less normal distribution of letters, as opposed to using</p>
+                            <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                Lorem Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it
+                                has a more-or-less normal distribution of letters, as opposed to using</p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                        <p>lorem ipsum dolor sit amet, consectetur mod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </article>
+                <article class="otherContent">
+                    <a id="other"></a>
+                    <header>
+                        <h3>Outros Assuntos</h3>
+                    </header>
+                    <div>
+                        <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                            Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters, as opposed to using</p>
+                        <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                            Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters, as opposed to using</p>
+                    </div>
+                </article>
+                <article class="otherContent">
+                    <a id="another"></a>
+                    <header>
+                        <h3>Outros Assuntos</h3>
+                    </header>
+                    <div>
+                        <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                            Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters, as opposed to using</p>
+                        <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                            Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters, as opposed to using</p>
+                        <p>Opa Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                            a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                            Ipsum passages, and more recently with desktop It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                            normal distribution of letters, as opposed to using</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <aside id="sidebar">
+            <h3>Outros Títulos</h3>
+            <div id="moon"></div>
+            <p>Cheque a Seção seção Apress para mais titulos disponíveis</p>
+            <section id="titles">
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp" alt=""></a>
+                    </header>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+                    </p>
+
+                </article>
+                <article class="book">
+                    <header>
+                        <a href=""><img src="img/carro.jpg" alt=""></a>
+                    </header>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+                    </p>
+
+                </article>
+                <article class="book">
+                    <header>
+                        <a href=""><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp" alt=""></a>
+                    </header>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+                    </p>
+
+                </article>
+                <article class="book">
+                    <header>
+                        <a href=""><img src="" alt=""></a>
+                    </header>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+                    </p>
+
+                </article>
+                <article class="book">
+                    <header>
+                        <a href="http://www.apress.com/9781430240747"><img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4302-4075-4?as=webp" alt=""></a>
+                    </header>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+                    </p>
+                </article>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <p>
+            last updated <time datetime="2022-09-09T08:38:22-03:00">Set 09 2022</time>
+        </p>
+    </footer>
+    </div>
+</body>
+
+</html>

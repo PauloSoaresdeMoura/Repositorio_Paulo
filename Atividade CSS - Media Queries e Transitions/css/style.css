@@ -1,0 +1,108 @@
+body {
+    background-image: url(../img/images.jpg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+legend {
+    color: rgb(68, 63, 63);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    border: 5px solid rgb(15, 75, 14);
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(32, 117, 72) 0%, rgb(60, 172, 149) 50%, rgb(131, 201, 194) 100%);
+}
+
+.container:hover .btn-cad {
+    left: 50%;
+    transition: 3s;
+}
+
+.container:hover .btn-can {
+    left: 50%;
+    transition: 3s;
+}
+
+.btn-can {
+    background-color: orange;
+    color: rgb(22, 24, 25);
+    cursor: pointer;
+}
+
+.btn-cad {
+    background-color: rgb(7, 139, 0);
+    color: rgb(22, 23, 23);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 900px) and (max-width:1200px) {
+    .container {
+        font-family: sans-serif;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 300px;
+        border: 5px solid rgb(0, 139, 46);
+        margin: auto;
+        padding: 20px;
+        background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    }
+    input {
+        border: 2px solid rgb(58, 83, 58);
+    }
+    .btn-can {
+        background-color: rgb(255, 0, 0);
+        border-color: black;
+        cursor: pointer;
+    }
+    .btn-cad {
+        background-color: rgb(30, 111, 5);
+        border-color: black;
+        cursor: pointer;
+    }
+    .grow:hover {
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    .shrink:hover {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width:899px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 400px;
+        border: 5px solid rgb(179, 105, 68);
+        color: aliceblue;
+        margin: 0 auto;
+    }
+    input {
+        border: 2px solid rgb(235, 82, 44);
+    }
+    .btn-can {
+        background-color: rgb(129, 87, 9);
+        border: 2px solid rgb(23, 22, 22);
+        cursor: pointer;
+    }
+    .btn-cad {
+        background-color: rgb(24, 80, 21);
+        border: 2px solid rgb(23, 22, 22);
+        cursor: pointer;
+    }
+}

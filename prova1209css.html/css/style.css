@@ -1,0 +1,109 @@
+@media screen and (min-width:200px) and (max-width:1200px) {
+    .body {
+        font-size: 20px;
+        border: 2px solid rgb(140, 153, 237);
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 2px;
+        width: 960px;
+        height: 250px;
+    }
+    .Class1 {
+        background: rgb(77, 77, 112);
+        position: relative;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgb(43, 43, 44);
+        width: 910px;
+        height: 200px;
+    }
+    .Class2 {
+        grid-column: 1;
+        grid-row: 1;
+        background: rgb(196, 104, 29);
+    }
+    .Class3 {
+        grid-column: 2;
+        grid-row: 2;
+        background: rgb(123, 126, 125);
+        color: black;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .body {
+        background: rgb(21, 105, 157);
+        border: 3px solid rgb(91, 72, 199);
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        width: 950px;
+    }
+    .Class1 {
+        background: rgb(110, 186, 231);
+    }
+    .Class2 {
+        background: rgb(135, 88, 88);
+    }
+    .Class3 {
+        background: indianred;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .body {
+        background: rgb(82, 156, 190);
+        border: 3px solid rgb(125, 125, 199);
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        width: 990px;
+        position: relative;
+    }
+    .Class1 {
+        background: rgb(26, 133, 199);
+    }
+    .Class2 {
+        background: darkred;
+    }
+    .Class3 {
+        background: indianred;
+    }
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: "Helvetica";
+    color: aliceblue;
+}
+
+header {
+    border-radius: 8px;
+    background-color: rgb(105, 99, 99, 0.3);
+}
+
+footer {
+    background-color: rgba(103, 101, 101, 0.5);
+    height: 55px;
+    text-align: center;
+    width: relative;
+}
+
+fieldset {
+    max-width: relative;
+}
