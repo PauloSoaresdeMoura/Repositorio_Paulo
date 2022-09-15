@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Exercicio CSS</title>
+        <style>
+            #p{
+                font: 24px Verdana bold;
+            }
+            body{
+                font-family:Verdana;
+                background-color: rgb(194,179,179);
+            }
+            legend{
+                color: rgb(152, 204, 180);
+                font-weight: bold;
+            }
+            table {
+                border: 3px solid white;
+                background-color: #e0f3ed;             
+            }
+            p{
+                font-size:14px;
+                color: gray;
+            }          
+            input{
+                border: 1px solid rgb(193, 236, 216);              
+                padding: auto;
+                padding: 8px 50px;
+            }
+            
+            input.btn-ok{
+                background-color:rgb(154, 201, 190);
+                cursor: pointer;
+                padding: 8px 32px;
+                font-size: 16px;
+                border-radius: 5px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <table align="center" cellspacing="10">          
+                <tr>
+                    <td>
+                        <legend>CADASTRE-SE</legend>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <p>Insira seus dados abaixo para receber as<br> novidades gratuitamente em seu email</p>
+                    </td>
+                </tr>  
+                <tr>
+                    <td align="left">
+                        <input type="nome" placeholder="Seu nome" size="22">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input type="nome" placeholder="Seu e-mail" size="22">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <input type="submit" value="Cadastrar" class="btn-ok">
+                    </td>
+                </tr>          
+            </table> 
+        </form>
+    </body>
+</html>

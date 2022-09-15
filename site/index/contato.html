@@ -1,0 +1,58 @@
+<head>
+    <title>Meu Site</title>
+    <link rel = "icon" href = "C:\Users\Alunos\Documents\GitHub\Repositorio_Paulo\imguno.png">
+    <img src = "C:\Users\Alunos\Documents\GitHub\Repositorio_Paulo\imguno.png" width = "100" height = "50">
+
+</head>
+    
+<body style = "background-color:rgb(190, 96, 68)">
+    
+    <a href = "index.html">
+        <b>| Home |</b>
+    </a>
+
+    <a href = "somos.html">
+        <b>| Quem somos |</b>
+    </a>
+
+    <a href = "contato.html">
+        <b>| Contato |</b>
+    </a>
+
+    <h2>Entre em contato conosco:</h2>
+    <form>
+        <p>
+            Nome:<br>
+            <input type="text" size="40" name="Pedro">
+        </p>
+        
+        <p>
+            Email:<br>
+            <input type="text" size="40" name="pedro@email">
+        </p>
+
+        <p>
+            Comentário:<br>
+            <input type="text" size="40" name="Vc vai conseguir">
+        </p>
+
+        <p>
+            <input type="submit" name="btnEnviar" value="Enviar">
+            <input type="reset" name="btnApagar" value="Apagar">
+        </p>
+
+        </form>
+
+        <h2>Configuração</h2>
+        <form action="acao.php" method= "post">
+            Limiar: 
+            <input type="range" name="Limiar" min="0" max="100" value="50">
+            <input type="submit" value="Enviar">
+    
+        </form>
+
+        <form name="numero" id="numero" method="get">
+            <input type="number" name="num" min="0" max="10" step="1">
+            <input type="submit" value="Enviar">
+
+</body>
