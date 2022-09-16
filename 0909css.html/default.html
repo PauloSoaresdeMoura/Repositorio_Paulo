@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen and NotColor" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>Cadastro de Clientes</title>
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="Class1">
+            <header>
+                <h2>Produtos Tecnológicos</h2>
+            </header>
+            <tr>
+                <table>
+                    <td align="center">
+                        <a href="default.html">
+                            <img src="./img/clientes.jpg" width="42" height="36">
+                            <br> Clientes
+                        </a>
+                    </td>
+                    <br>
+                    <td align="center">
+                        <a href="produtos.html">
+                            <img src="./img/produtos.jpg" width="42" height="36">
+                            <br> Produtos
+                        </a>
+                    </td>
+                </table>
+            </tr>
+        </div>
+        <br>
+        <h1 align="center">Cadastro de Clientes</h1>
+        <form action="" method="post">
+            <!--Dados pessoais-->
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="nome">Nome:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="nome">
+                        </td>
+                        <td>
+                            <label for="sobrenome">Sobrenome:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="sobrenome">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Data Nascimento:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="dia" size="2" maxLength="2" value="dd">
+                            <input type="text" name="mes" size="2" maxLength="2" value="mm">
+                            <input type="text" name="ano" size="4" maxLength="4" value="aaaa">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="rg">RG:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="rg" size="13" maxLength="13">
+                        </td>
+                        <td>
+                            <label>CPF:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="cpf" size="9" maxLength="9"> -
+                            <input type="text" name="cpf2" size="2" maxLength="2">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <!--Dados de Endereço-->
+            <fieldset>
+                <legend>Dados de Endereço</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="rua">Rua:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="rua">
+                        </td>
+                        <td>
+                            <label for="nro">Número:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="nro" size="6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="bairro">Bairro:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="bairro">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="estado">Estado:</label>
+                        </td>
+                        <td align="left">
+                            <select name="estado" id="uf">
+                                <option value = "ac">Acre</option>
+                                <option value = "al">Alagoas</option>
+                                <option value = "am">Amazonas</option>
+                                <option value = "ap">Amapá</option>
+                                <option value = "ba">Bahia</option>
+                                <option value = "ce">Ceará</option>
+                                <option value = "df">Distrito Federal</option>
+                                <option value = "es">Espirito Santo</option>
+                                <option value = "go">Goiás</option>
+                                <option value = "ma">Maranhão</option>
+                                <option value = "mt">Mato Grosso</option>
+                                <option value = "ms">Mato Grosso do Sul</option>
+                                <option value = "mg">Minas Gerais</option>
+                                <option value = "pa">Pará</option>
+                                <option value = "pb">Paraíba</option>
+                                <option value = "pe">Pernambuco</option>
+                                <option value = "pr">Paraná</option>
+                                <option value = "pi">Piauí</option>
+                                <option value = "rj">Rio de Janeiro</option>
+                                <option value = "rn">Rio Grande do Norte</option>
+                                <option value = "ro">Rondônia</option>
+                                <option value = "rs">Rio Grande do Sul</option>
+                                <option value = "rr">Roraima</option>
+                                <option value = "sc">Santa Catarina</option>
+                                <option value = "se">Sergipe</option>
+                                <option value = "sp">São Paulo</option>
+                                <option value = "to">Tocantins</option>
+                            </selected>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cidade">Cidade:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="cidade">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cep">Cep:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="cep" size="5" maxLength="5">
+                            -
+                            <input type="text" name="cep2" size="3" maxLength="3">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <!--Dados de Login-->
+            <fieldset>
+                <legend>Dados de Contato:</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="celular">Celular:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="celular">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="telefone">Telefone:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="telefone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="profissao">Profissão:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="profissao">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <input align="right" type="submit" value="Cadastrar">
+            <input type="reset" value="Cancelar">
+        </form>
+        <footer>
+            <p>
+                last updated <time datetime="2022-09-09T08:38:22-03:00">Set 09 2022</time>
+            </p>
+        </footer>
+
+    </body>
+
+</html>

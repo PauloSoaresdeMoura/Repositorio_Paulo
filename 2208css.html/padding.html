@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><a href="margin.html">Margin</a></td>
+            <td><a href="padding.html">Padding</a></td>
+            <td><a href="position.html">Position</a></td>
+            <td><a href="transition.html">Transition</a></td>
+        </tr>
+    </table>
+    <!--Padding corresponde a distancia interna entre um elemento e sua borda!-->
+    <!--Os elementos que ocupam toda a linha são chamados elementos de bloco ou block
+    inline são aqueles que ocupam apenas o espaço correspondente ao seu conteúdo-->
+    <!--Elementos block-->
+    <h2 class="borda padding-h2">Elemento block com padding</h2>
+    <h2 class="borda">Elemento block sem padding</h2>
+    <br>
+    <!--Elemento inline-->
+    <a href="a" class="borda padding-h2">Elemento inline com padding</a>
+    <a href="a" class="borda">Elemento inline sem padding</a>
+    <br><br>
+    <!--padding: height: tamanho definido valores absolutos ou eletivos
+    / initial: valor padrão do elemento/ inherit: recebe o valor do elemento pai-->
+    <h3 style="padding: 10%; border: 5px solid green">Elemento padding com percentual!</h3>
+    <br>
+    <div class="borda padding-vlr">
+        <p class="borda-1 padding-Inherit">Este paragrafo está com padding inherit</p>
+        <br>
+        <p class="borda-2 padding-Initial">Este paragrafo está com padding initial</p>
+    </div>
+    <br>
+    <div class="borda-1 padding-vlr2">
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma</p>
+    </div>
+</body>
+
+</html>

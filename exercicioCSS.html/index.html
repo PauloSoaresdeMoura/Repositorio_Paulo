@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Exercicio CSS</title>
+    <style>
+        body {
+            font-family: Verdana;
+            background-color: rgb(41, 44, 43);
+        }
+        
+        legend {
+            color: rgb(142, 197, 184);
+            font-weight: bold;
+        }
+        
+        table {
+            border: 4px solid white;
+            background-color: #dff9ed;
+        }
+        
+        p {
+            font-size: 16px;
+            color: gray;
+        }
+        
+        input {
+            border: 1px solid rgb(128, 232, 199);
+            padding: 10px;
+        }
+        
+        input.btn-ok {
+            background-color: rgb(142, 197, 184);
+            cursor: pointer;
+            padding: 8px 22px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+
+        <table align="center" cellspacing="10">
+            <tr align="left">
+                <td>
+                    <legend>CADASTRE-SE</legend>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <p>Insira seus dados abaixo para receber as<br>novidades gratuitamente em seu e-mail</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <input type="text" name="nome" placeholder="Seu nome" size="43">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <input type="text" name="e-mail" placeholder="Seu e-mail" size="43">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <input type="submit" value="Cadastrar" class="btn-ok">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

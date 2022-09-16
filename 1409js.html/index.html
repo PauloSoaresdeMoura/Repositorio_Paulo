@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio JavaScript</title>
+    <style>
+        body {
+            background: rgb(84, 84, 88);
+            color: white;
+            font: normal 18px Arial;
+        }
+        
+        fieldset {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando os estudos em JavaScript</h1>
+    <br>
+    <p>Aprendendo a usar os Operadores</p>
+    <!--<script type="text/javascript">
+        document.write("O valor da soma de 25 + 78 é: " + vlr);
+    </script>-->
+
+    <fieldset>
+        <legend>Cálculo de Soma</legend>
+        <label>Valor 1:</label>
+        <input id="txt1" type="text" />
+        <label>Valor 2: </label>
+        <input id="txt2" type="text" />
+        <button id="somar" onclick="somarValores()">Somar</button>
+    </fieldset>
+
+    <script type="text/javascript">
+        function somarValores() {
+            var s1 = document.getElementById("txt1").value;
+            var s2 = document.getElementById("txt2").value;
+            var s3 = s1 + s2;
+            alert(s3);
+        }
+    </script>
+
+</body>
+
+</html>

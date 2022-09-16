@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>Produtos</title>
+</head>
+
+<body style="background-color:rgb(153, 155, 159)">
+    <!--INICIO MENU-->
+    <table align="left">
+        <div class="body">
+            <div class="Class2">
+                <div class="logo" align="center">
+                    <img src="img/tec2.jpg" alt="">
+                </div>
+                <header align="center">
+                    <h2>Produtos Tecnológicos</h2>
+                </header>
+                <tr>
+                    <td align="left">
+                        <a href="index.html">
+                            <img src="./img/clientes.jpg" width="42" height="36">
+                            <br> Clientes
+                        </a>
+                    </td>
+                    <td align="right">
+                        <a href="produtos.html">
+                            <img src="./img/produtos.jpg" width="42" height="36">
+                            <br> Produtos
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        </div>
+    </table>
+    <br>
+    <h1 align="center">Cadastro de Produtos</h1>
+    <form action="" method="post">
+        <!--Dados do Produto-->
+        <fieldset>
+            <legend>Dados dos Produtos:</legend>
+            <table cellspacing="10">
+                <tr>
+                    <td>
+                        <label>Nome:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="nome do produto">
+                    </td>
+                    <td>
+                        <label for="nome">Marca:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="marca do produto">
+                    </td>
+                    <br>
+                    <td>
+                        <label>Descrição:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="descricao do produto">
+                    </td>
+                    <td>
+                        <label for="nome">Quantidade:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="quantidade">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Data de Fabricação:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="dia" size="2" maxLength="2" value="dd">
+                        <input type="text" name="mes" size="2" maxLength="2" value="mm">
+                        <input type="text" name="ano" size="4" maxLength="4" value="aaaa">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <!--Valores Produtos-->
+        <fieldset>
+            <legend>Valor do Produto:</legend>
+            <table cellspacing="10">
+                <tr>
+                    <td>
+                        <label for="nome">Preço de Custo:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="preco de custo">
+                    </td>
+                    <td>
+                        <label for="nome">Preço de Venda:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="preco de venda">
+                    </td>
+                    <td>
+                        <label for="nome">Categoria:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="categoria">
+                    </td>
+                    <td>
+                        <label for="nome">Dados Tributários:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="dados tributarios">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <!--Informações adicionais-->
+        <fieldset>
+            <legend>Informações Adicionais:</legend>
+            <table cellspacing="10">
+                <tr>
+                    <td>
+                        <label for="nome">Fabricante:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="fabricante">
+                    </td>
+                    <td>
+                        <label for="nome">Validade:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="validade">
+                    </td>
+                    <td>
+                        <label>Data de Compra:</label>
+                    </td>
+                    <td align="left">
+                        <input type="text" name="dia" size="2" maxLength="2" value="dd">
+                        <input type="text" name="mes" size="2" maxLength="2" value="mm">
+                        <input type="text" name="ano" size="4" maxLength="4" value="aaaa">
+                    </td>
+                    <tr>
+                        <td>
+                            <label>Vendedor:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="vendedor">
+                        </td>
+                        <td>
+                            <label>NF Compra:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="nf compra">
+                        </td>
+                        <td>
+                            <label for="nome">Código de Barras:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="codigo de barras">
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Cancelar">
+    </form>
+    <br>
+    <footer>
+        <h3><i class="fa-solid fa-copyright"></i> Copyright organizaçõe Tabajara -
+            <i class="fa-solid fa-registered"></i> Todos os Direitos reservados</h3>
+    </footer>
+    </div>
+    </div>
+    </table>
+
+</body>
+
+
+</html>

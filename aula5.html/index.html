@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html lang=”pt-br”>
+
+<head>
+    <meta charset=”UTF-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--Scrip Jq, JS, Pop-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <div class="container">
+
+
+        <h3 align="center"><s>Formulário de Cadastro</s></h3>
+        <br/>
+
+        <div class="form-horizontal">
+            <!--Nome:-->
+            <div class="form-group">
+
+                <label class="col-md-2 control-label">Nome:</label>
+                <div class="col-md-8">
+                    <input id="nome" name="nome" placeholder="Digite seu nome" class="form-control input-md" type="text" />
+                </div>
+
+            </div>
+            <!--CPF:-->
+            <div class="form-group">
+                <div class="row form-group">
+                    <label class="col-md-2 control-label">CPF:</label>
+                    <div class="col-md-2">
+                        <input id="cpf" name="cpf" placeholder="Digite seu CPF" class="form-control input-md" type="text" />
+                    </div>
+                </div>
+            </div>
+            <!--Data de Nascimento-->
+            <div class="form-group">
+                <div class="row form-group">
+                    <label>Data Nascimento:</label>
+                    <div class="col-md-2">
+                        <input placeholder="dd/mm/aaaa" class="form=contol input-md-8" type="text" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label class="col-md-2 control-label" for="radios">Sexo:</label>
+                <div class="form-control col-md-2">
+                    <label class="radio-inline" for="radios-0">
+                            <input name="sexo" id="sexo" value="feminino" type="radio">Femenino
+                        </label>
+                    <label class="radio-inline" for="radios-1">
+                            <input name="sexo" id="sexo" value="masculino" type="radio">Masculino
+                        </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
