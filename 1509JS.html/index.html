@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fonts-awesome/6.2.0/css/all.min.css">
+    
+    <title>Introdução Javascript</title>
+
+    <script type="text/javascript" src="js/arquivo.js"></script>
+
+</head>
+<body>
+    <!--Disparo eventos-->
+    <button type="button" onclick="alert('Bem Vindo')">Clique Aqui!</button>
+    
+    <!--Atributo Global ID-->
+    <p id="paragrafo">Olá</p>
+    <button type="button" onclick="fAlterar();">Alterar!</button>
+    <br><br>
+    <p><img id="imglampada" src="img/pic_bulboff.gif" alt=""></p>
+    <button id="btnInter" type="button" onclick="inter();">Ligar</button>
+    <br><br>
+    <fieldset>
+        <legend>Calculos Matemáticos:</legend>
+        <input type="text" id="v1">
+        <br><br>
+        <input type="text" id="v2">
+        <br><br>
+        <p id="res">Resposta:</p>
+        <button type="reset" onclick="limpa();">Limpa</button>
+        <button type="button" onclick="soma();">+</button>
+        <button type="button" onclick="sub();">-</button>
+        <button type="button" onclick="mult();">*</button>
+        <button type="button" onclick="div();">/</button>
+        <button type="button" onclick="resDiv();">R%</button>
+        <button type="button" onclick="porcento();">%</button>
+
+    </fieldset>
+</body>
+</html>
