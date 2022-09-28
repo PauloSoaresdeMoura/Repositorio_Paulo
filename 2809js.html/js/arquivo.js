@@ -61,3 +61,43 @@ i = 0;
 contagem.forEach(contagem => {
     i++;
 });
+
+//Break - Encerra o loop atual
+//sintaxe break[label]; - break;
+//ex: A função encerra o loop quando a variável i for 3 e então retorna e * x
+function testaBreak(x){
+    var i = 0;
+    while(i < 6){
+        if(i==3){
+            break;
+        }
+        i+= 1;
+    }
+    return i * x;
+}
+
+//A condição Switch avalia uma expressão, combinando o valor da expressão com uma "clausula case" 
+//e executa os comandos associados ao case
+switch(expr){
+    case "Laranjas":
+        console.log("Laranjas R$ 1,99 KG");
+        break;
+    case "Banana":
+        console.log("Banana R$ 2,99 KG");
+        break;
+    case "Abacate":
+        console.log("Abacate R$ 5,99 KG");
+        break;         
+    case "Melancia":
+        console.log("Melancia R$ 6,99 KG");
+        break;
+    case "Manga":
+        console.log("Manga R$ 4,99 KG");
+        break;
+    case "Morango":
+            console.log("Morango R$ 4,99 KG");
+            break;    
+    default:
+        console.log("Desculpe, estamos sem nenhuma "+ expr +" . " )   
+}
+console.log("Gostaria de adicionar mais algo?")
