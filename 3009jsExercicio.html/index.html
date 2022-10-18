@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <title>Cardápio Lanchonete</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        switch (expr) {
+            case cachorroQuente:
+                cachorroQuente++;
+                break;
+            case bauruSimples:
+                bauruSimples++;
+                break;
+            case bauruComOvo:
+                bauruComOvo++;
+                break;
+            case hamburguer:
+                hamburguer++;
+                break;
+            case cheeseburguer:
+                cheeseburguer++;
+                break;
+            case refrigerante:
+                refrigerante++;
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Escolha os seus Lanches</h3>
+    <br>
+    <form name="selectForm">
+        <p>
+            <label for="cardapioLanchonete">Escolha alguns tipos de lanches em seguida clique no botão:</label>
+            <select name="cardapioLanchonete" id="codigo" multiple="multiple"> 
+                <option>Cachorro Quente R$ 1,70</option>
+                <option>Bauru Simples R$ 2,30</option>
+                <option>Bauru Com Ovo R$ 2,60</option>
+                <option>Hamburguer R$ 2,40</option>
+                <option>Cheeseburguer R$ 2,50</option>
+                <option>Refrigerante R$ 1,00</option>
+            </select>
+        </p>
+        <p><input type="button" id="btn" value="Quantos foram selecionados?"></p>
+    </form>
+
+    <table border="5">
+
+        <tr>
+            <!--th deixe em negrito-->
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <td>100</td>
+            <td>Cachorro Quente</td>
+            <td>R$ 1,70</td>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Bauru Simples</td>
+            <td>R$ 2,30</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Bauru Com Ovo</td>
+            <td>R$ 2,60</td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Hamburguer</td>
+            <td>R$ 2,40</td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Cheeseburguer</td>
+            <td>R$ 2,50</td>
+        </tr>
+
+        <tr>
+            <td>105</td>
+            <td>Refrigerante</td>
+            <td>R$ 1,00</td>
+        </tr>
+        </select>
+    </table>
+    <br>
+    <div class="bnt">
+        <input type="button" value="Finalizar o Pedido" id="btFinalizar" onclick="finalizarPedido()">
+    </div>
+    <br>
+    <h2>Contagem de 1 até 100 - Marcando Números Pares</h2>
+    <button onclick="contarPares()" id="btn2">Iniciar contagem</button>
+    <section id="out2">
+        <p>Aperte o botão para iniciar a contagem</p>
+    </section>
+    <br>
+    <h2>Contagem de 1 até 15</h2>
+    <button onclick="contar15()" id="btn3">Iniciar contagem</button>
+    <section id="out3">
+        <p>Aperte o botão para iniciar a contagem</p>
+    </section>
+    <br>
+
+
+    <form id="frmCadastro">
+        <h3 align="center">Escolha os seus Lanches</h3>
+        <ul>
+            <li>
+                <label for="txtCachorroQuente">Cachorro Quente</label>
+                <input value="R$ 1,70" id="100">
+            </li>
+            <li>
+                <label for="txtBauruSimples">Bauru Simples</label>
+                <input value="R$ 2,30" id="101">
+            </li>
+            <li>
+                <label for="txtBauruComOvo">Bauru Com Ovo</label>
+                <input value="R$ 2,60" id="102">
+            </li>
+            <li>
+                <label for="txtHamburguer">Hamburguer</label>
+                <input value="R$ 2,40" id="103">
+            </li>
+            <li>
+                <label for="txtCheeseburguerr">Cheeseburguer</label>
+                <input value="R$ 2,50" id="104">
+            </li>
+            <li>
+                <label for="txtRefrigerante">Refrigerante</label>
+                <input value="R$ 1,00" id="105">
+            </li>
+            <li>
+                <input type="submit" value="Comprar" id="btnComprar">
+            </li>
+        </ul>
+    </form>
+    <table id="tblListar"></table>
+
+
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

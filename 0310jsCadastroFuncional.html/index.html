@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Lista de Compras</title>
+
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <table id="tbProdutos">
+            <legend>Lista de Compras</legend>
+            <form name="form">
+                <div id="erro" style="display: none"></div>
+                <td>
+                    <div class="codigo">
+                        <label for="txtCodigo">Código:</label>
+                        <input type="text" class="form" name="codigo" id="codigo">
+                    </div>
+                </td>
+                <td>
+                    <div class="descricao">
+                        <label for="txtDescricao">Descrição:</label>
+                        <input type="text" class="form" name="discricao" id="discricao">
+                    </div>
+                </td>
+                <td>
+                    <div class="quantidade">
+                        <label for="txtQuantidade">Quantidade:</label>
+                        <input type="text" class="form" name="quantidade" id="quantidade">
+                    </div>
+                </td>
+                <td>
+                    <div class="btnAdicionar">
+                        <input type="submit" class="form" onClick="return validar()" name="btnAdicionar" id="btnAdicionar" value="Adicionar">
+                    </div>
+                </td>
+            </form>
+        </table>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Itens da sua Lista</legend>
+        <table id="tblListar"></table>
+    </fieldset>
+
+
+    <script src="js/js.js"></script>
+
+</body>
+
+</html>
