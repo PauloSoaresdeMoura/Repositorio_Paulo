@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop's - Instruções de repetição</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>Contando de 1 até 10</h2>
+    <button onclick="contar1()" id="btn1">conte de 1 até 10</button>
+    <section id="out1">
+        <p>Clique no botão para iniciar a contagem</p>
+    </section>
+    <br>
+    <h2>Contagem de 1 até 10 - Marcando Números Pares</h2>
+    <button onclick="contar2()" id="btn2">Iniciar contagem</button>
+    <section id="out2">
+        <p>Aperte o botão para iniciar a contagem</p>
+    </section>
+    <br>
+    <h2>Contagem de 1 até 10 - Marcando Números Ímpares</h2>
+    <button onclick="contar3()" id="btn3">Iniciar contagem</button>
+    <section id="out3">
+        <p>Aperte o botão para iniciar a contagem</p>
+    </section>
+    <br>
+    <h2>Contagem Regressiva</h2>
+    <button onclick="contar4()" id="btn4">Iniciar contagem</button>
+    <section id="out4">
+        <p>Aperte o botão para iniciar a contagem</p>
+    </section>
+    <br>
+    <h2>Contagem Inteligente</h2>
+    <p>Insira o valor inicial e final da contagem (acendente ou decrescente e negativos)</p>
+    <section id="in">
+        <form action="#" method="get">
+            <p>
+                <label for="fn1">Valor Inicial:</label>
+                <input type="text" name="n1" id="fn1" placeholder="Inicio da Contagem">
+            </p>
+            <p>
+                <label for="fn2">Valor Final:</label>
+                <input type="text" name="n2" id="fn2" placeholder="Fim da Contagem">
+            </p>
+            <p>
+                <input onclick="contagem5()" type="submit" value="contar" formaction="javascript:contagem">
+            </p>
+        </form>
+    </section>
+    <section id="out5">
+        <p>Insira as informações e clique no botão</p>
+    </section>
+    <br>
+    <h1>Super Tabuada</h1>
+    <p>
+        Escreva um número na caixa a seguir e te mostrarei a tabuada dele
+    </p>
+    <section id="entrada">
+        <form action="#" method="get">
+            <p>
+                <label for="fnum">Número:</label>
+                <input type="numner" name="num" id="fnum" placeholder="Número:">
+                <input type="submit" value="Tabuada" formaction="javascript:tabuada()">
+            </p>
+        </form>
+    </section>
+    <section id="saida">
+        <p>Preencha os dados acima e pressione o botão</p>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

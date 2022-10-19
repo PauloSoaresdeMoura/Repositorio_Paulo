@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(204, 204, 208);
+    font-family: Helvetica;
+    border: 2px solid rgb(63, 62, 62);
+    border-radius: 3px;
+}
+
+legend {
+    color: rgb(92, 89, 89);
+    position: fixed;
+}
+
+.container {
+    margin-top: 0px;
+    background-color: aliceblue;
+    position: relative;
+    width: 1000px;
+    margin-left: 190px;
+    padding: 15px;
+    border: 2px solid rgb(65, 63, 63);
+    border-radius: 3px;
+}
+
+h1 {
+    color: rgb(73, 74, 76);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 0;
+}
+
+h2 {
+    color: rgb(74, 74, 75);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3px;
+}
+
+h3 {
+    color: rgb(45, 48, 54);
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+hr {
+    color: aliceblue;
+}
+
+img {
+    position: fixed;
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 120px;
+    height: 150px;
+    border: 2px solid rgb(59, 57, 57);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 700px;
+        background-color: rgb(197, 205, 218);
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    .container {
+        max-width: 190px;
+        margin-right: 20px;
+        background-color: rgb(185, 185, 189);
+    }
+    body {
+        position: absolute;
+    }
+}

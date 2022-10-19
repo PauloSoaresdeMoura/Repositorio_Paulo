@@ -1,0 +1,45 @@
+#erro {
+    width: auto;
+    height: 30px;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 25px;
+}
+
+#btnAdicionar {
+    background-color: green;
+    border: 2px;
+    color: aliceblue;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#tblListar {
+    width: 100%;
+    border: solid 2px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#tblListar tbody tr {
+    border: solid 2px;
+    height: 30px;
+}
+
+#tblListar thead {
+    background: rgb(243, 250, 225);
+}
+
+input {
+    border: 2px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    background: rgb(230, 227, 227);
+}

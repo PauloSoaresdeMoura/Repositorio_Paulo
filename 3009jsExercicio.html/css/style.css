@@ -1,0 +1,53 @@
+.function {
+    border: 3px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 35px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul label {
+    width: 150px;
+    float: left;
+}
+
+#frmCadastro {
+    width: 100%;
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+#btnComprar {
+    background-color: green;
+    border: 2px;
+    color: aliceblue;
+    padding: 8px 2px;
+    border-radius: 5px;
+}
+
+#tblListar {
+    width: 100%;
+    border: solid 2px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#tblListar tbody tr {
+    border: solid 2px;
+    height: 30px;
+}
+
+#tblListar thead {
+    background: bisque;
+}
+
+input {
+    border: 2px solid;
+    border-radius: 5px;
+    width: 60px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <!--CSS only-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/arquivo.js"></script>
+</head>
+
+<body onload="checkCookies()">
+    <!--
+        onBlur => remove foco do elemento
+        onChange => muda o valor elemento
+        onClick => o elemento e clicado pelo usuario
+        onFocus => o elemento e focado 
+        onKeyPress => o usuario preciona uma tecla sobre o elemento
+        onLoad => carregar o elemento por completo
+        onMouseOver => define ação quando o usuario passa o mouse sobre o elemento
+        onMouseOut => define ação quando o usuario retira o mouse sobre o elemento
+        onSubmit => define ação de enviar o formulario
+    -->
+
+    <!--Evento onClick-->
+    <h1 onclick="this.innerHTML='Isso aconteçe quando usamos o evento onclick!'">Clique aqui para testar o evento onClick!</h1>
+    <br>
+    <!--Evento onload-->
+    <h2>onLoad</h2>
+    <p>Irá aparecer um alert dizendo se os cookies estão ou não liberados em seu navegador</p>
+    <br>
+    <!--Evento onChange-->
+    Insira seu nome: <input type="text" id="fname" onChange="myChange()">
+    <br>
+    <!--onMouseOver onMouseOut-->
+    <p>onMouseOver e onMouseOut</p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Passe o mouse Aqui
+    </div>
+    <br>
+    <!--onMouseDown, onMouseUp e onClick-->
+    <p>onMouseDown, onMouseUp e onClick</p>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Clique aqui
+    </div>
+    <br>
+    <!--onFocus e onBluer-->
+    <p>onFocus e onBlur</p>
+    Clique dentro e fora:<input type="text" id="meuInput" onfocus="dentro()" onblur="fora()">
+
+</body>
+
+</html>
